@@ -45,7 +45,7 @@
     <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Siti</span>
+            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Siti Jalilah</span>
             <img class="img-profile rounded-circle"
                 src="https://i.pinimg.com/736x/3f/94/70/3f9470b34a8e3f526dbdb022f9f19cf7.jpg">
         </a>
