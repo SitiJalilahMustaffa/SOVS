@@ -6,7 +6,7 @@
     <div class="sidebar-brand-icon rotate-n-15">
         <i class="fas fa-vote-yea"></i>
     </div>
-    <div class="sidebar-brand-text mx-3">SOVS</div>
+    <div class="sidebar-brand-text mx-3">SOVS KUIS</div>
 </a>
 
 <!-- Divider -->

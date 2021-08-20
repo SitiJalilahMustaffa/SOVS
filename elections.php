@@ -119,45 +119,44 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Election Name</th>
-                                            <th>Number of Candidates</th>
+                                        <th>Election Name</th>
                                             <th>Type of Election</th>
                                             <th>Faculty</th>
-                                            <th>Year</th>
-                                            <th>Start Date</th>
                                             <th>End Date</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>Election Name</th>
-                                            <th>Number of Candidates</th>
                                             <th>Type of Election</th>
                                             <th>Faculty</th>
-                                            <th>Year</th>
-                                            <th>Start Date</th>
                                             <th>End Date</th>
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <tr>
                                             <td>PMPP</td>
-                                            <td>20</td>
                                             <td>General</td>
                                             <td>All</td>
-                                            <td>2021</td>
-                                            <td>10/8/2021</td>
                                             <td>12/8/2021</td>
+                                            <td>
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i></button> 
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>PMPP</td>
-                                            <td>2</td>
                                             <td>Faculty</td>
                                             <td>FSTM</td>
-                                            <td>2021</td>
-                                            <td>10/8/2021</td>
                                             <td>12/8/2021</td>
-                                        </tr>
+                                            <td>
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i></button> 
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
+                                            </td>
                                       
                                        
                                     </tbody>

@@ -60,43 +60,35 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Matric Number</th>
-                                            <th>Course Code</th>
-                                            <th>Faculty</th>
-                                            <th>Semester</th>
-                                            <th>Image</th>
-                                            <th>Campaign</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                        <th>Name</th>
+                                            <th>Name</th>
                                             <th>Matric Number</th>
-                                            <th>Course Code</th>
-                                            <th>Faculty</th>
-                                            <th>Semester</th>
-                                            <th>Image</th>
-                                            <th>Campaign</th>
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <tr>
                                             <td>Alisya Adnan</td>
                                             <td>19BT02026</td>
-                                            <td>BT02</td>
-                                            <td>FSTM</td>
-                                            <td>5</td>
-                                            <td> </td>
-                                            <td> Be the Best, Help the Rest </td>
+                                            <td>
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i></button> 
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button> 
+                                          </td>
+                                            
                     
                                         </tr>
                                         <tr>
                                             <td>Iman Daniel</td>
                                             <td>195074</td>
-                                            <td>BA01</td>
-                                            <td>FPPI</td>
-                                            <td>5</td>
-                                            <td> </td>
-                                            <td> Strive for better future </td>
+                                            <td>
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i></button> 
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button> 
                                         </tr>
                                       
                                        

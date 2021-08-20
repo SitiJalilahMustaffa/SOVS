@@ -86,6 +86,7 @@
                                             <td>
                                             <button class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
                                             <button class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i></button> 
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
                                         </td>
                                         </tr>
                                         <tr>
@@ -94,7 +95,11 @@
                                             <td>BA01</td>
                                             <td>FPPI</td>
                                             <td>5</td>
-                                            <td> </td>
+                                            <td>
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i></button> 
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>  
+                                          </td>
                                         </tr>
                                       
                                        
