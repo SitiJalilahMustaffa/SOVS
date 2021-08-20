@@ -83,13 +83,7 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-2 text-gray-800">ELECTIONS DATA</h1>
-                    <div class="dropdown">
-                    <button class="dropbtn">Manage Election</button>
-                    <div class="dropdown-content">
-                    <a href="#">Add Election</a>
-                    <a href="#">Edit Election</a>
-                    <a href="#">Delete Election</a>
-                </div>
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Add Election</button>
             </div>
 
         <!-- Dropdown - User Information -->
@@ -175,16 +169,18 @@
                 </div>
                 <!-- /.container-fluid -->
 
-            </div>
+           
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    </div>
             <!-- End of Main Content -->
 
            <?php include 'footer.php' ?>
 
         </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
