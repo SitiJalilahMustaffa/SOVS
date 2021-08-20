@@ -46,7 +46,7 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-2 text-gray-800">CANDIDATE</h1>
-                    <button type="button" class="btn btn-outline-primary">Add Candidate</button>
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Add Candidate</button>
 </div>
                    <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -111,6 +111,60 @@
 
             </div>
             <!-- End of Main Content -->
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Insert students' data</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Name</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Matric Number</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Matric Number">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">CGPA</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="CGPA">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Image</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Image">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Course Code</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Faculty</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Semester</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+  
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">S</button>
+      </div>
+    </div>
+  </div>
+</div>
 
            <?php include 'footer.php' ?>
 
