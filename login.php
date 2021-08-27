@@ -10,9 +10,9 @@
 	<div class="contact-form">
 		<img alt="" class="avatar" src="https://i.pinimg.com/736x/3f/94/70/3f9470b34a8e3f526dbdb022f9f19cf7.jpg">
 		<h2>Login to SOVS</h2>
-		<form action="">
-			<p>Email</p><input placeholder="Enter Email" type="email">
-			<p>Passwrod</p><input placeholder="Enter Password" type="password"> <input type="submit" value="Sign in">
+		<form action="controller.php?mod=login" method="post">
+			<p>Email</p><input placeholder="Enter Email" type="email" name="email">
+			<p>Passwrod</p><input placeholder="Enter Password" type="password" name="password"> <input type="submit" value="Sign in">
 			<p><input type="checkbox">Remember Me</p>
 			<p><a class="small" href="forgot-password.php">Forgot Password?</a></p>
 			
