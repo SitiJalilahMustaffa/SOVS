@@ -1,3 +1,13 @@
+<?php
+
+include 'controller.php';
+if(!isset($_SESSION['admin_id'])){
+   session_destroy();
+   echo"<script>window.location = 'login.php'</script>";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -186,47 +196,47 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+
+      <form action="controller.php?mod=addStudent" method="post">
       <div class="modal-body">
-      <form>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Name</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Name">
+      <input type="text" class="form-control" id="text" placeholder="Name" name="name">
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Matric Number</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Matric Number">
+      <input type="text" class="form-control" id="text" placeholder="Matric Number" name="matricnumber">
     </div>
   </div>
   <div class="form-group">
     <label for="inputAddress">CGPA</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="CGPA">
+    <input type="text" class="form-control" id="text" placeholder="CGPA" name="cgpa">
   </div>
   <div class="form-group">
     <label for="inputAddress2">Image</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Image">
+    <input type="file" class="form-control" placeholder="Image">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputCity">Course Code</label>
-      <input type="text" class="form-control" id="inputCity">
+      <input type="text" class="form-control" id="inputCity" name="coursecode">
     </div>
     <div class="form-group col-md-2">
       <label for="inputZip">Faculty</label>
-      <input type="text" class="form-control" id="inputZip">
+      <input type="text" class="form-control" id="text" name="faculty">
     </div>
     <div class="form-group col-md-2">
       <label for="inputZip">Semester</label>
-      <input type="text" class="form-control" id="inputZip">
+      <input type="text" class="form-control" id="text" name="semester">
     </div>
   </div>
-  
-</form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">S</button>
+        <button type="submit" class="btn btn-primary">Save</button>
       </div>
+      </form>
     </div>
   </div>
 </div>

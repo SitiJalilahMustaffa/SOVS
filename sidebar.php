@@ -68,6 +68,12 @@
         <span>Election</span></a>
 </li>
 
+<li class="nav-item">
+    <a class="nav-link" href="faculties.php">
+    <i class="fas fa-cogs"></i>
+        <span>Faculty</span></a>
+</li>
+
 
 
 <!-- Divider -->

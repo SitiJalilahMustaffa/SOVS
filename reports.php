@@ -1,3 +1,13 @@
+<?php
+
+include 'controller.php';
+if(!isset($_SESSION['admin_id'])){
+   session_destroy();
+   echo"<script>window.location = 'login.php'</script>";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

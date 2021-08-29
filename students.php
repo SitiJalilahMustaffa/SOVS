@@ -1,3 +1,13 @@
+<?php
+
+include 'controller.php';
+if(!isset($_SESSION['admin_id'])){
+   session_destroy();
+   echo"<script>window.location = 'login.php'</script>";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,7 +57,7 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-2 text-gray-800">STUDENTS DATA</h1>
                     <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Add Student</button>
-</div>
+                    </div>
                    <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
