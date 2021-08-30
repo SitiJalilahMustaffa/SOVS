@@ -12,6 +12,10 @@ class controller{
 
 				switch ($action) {
 
+					case 'addElection':
+						$this->addElection($conn);
+						break;
+					
 					case 'addStudent':
 						$this->addStudent($conn);
 						break;
@@ -29,6 +33,20 @@ class controller{
 					
 				}
 			}
+		}
+
+		public function addElection($conn){
+			$name = $this->valdata($conn, $_POST['name']);
+			$type = $this->valdata($conn, $_POST['type']);
+			$description = $this->valdata($conn, $_POST['description']);
+			$datestart = $this->valdata($conn, $_POST['datestart']);
+			$dateend = $this->valdata($conn, $_POST['dateend']);
+ 
+			$sql = "INSERT INTO students (name, type, description, datestart, dateend) VALUES (?, ?, ?, ?, ?)";
+			$stmt = $conn->prepare($sql);
+			$rs = $stmt->execute([$name,$type,$description,$datestart,$dateend]);
+ 
+			$this->redirect('elections.php', 'Succesfully Saved');
 		}
 
        public function addStudent($conn){

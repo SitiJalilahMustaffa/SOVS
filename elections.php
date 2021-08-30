@@ -197,38 +197,30 @@ if(!isset($_SESSION['admin_id'])){
         </button>
       </div>
 
-      <form action="controller.php?mod=addStudent" method="post">
+      <form action="controller.php?mod=addElection" method="post">
       <div class="modal-body">
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Name</label>
-      <input type="text" class="form-control" id="text" placeholder="Name" name="name">
+      <label for="inputname">Name</label>
+      <input type="text" class="form-control"  placeholder="Name" name="name">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">Matric Number</label>
-      <input type="text" class="form-control" id="text" placeholder="Matric Number" name="matricnumber">
+      <label for="inputtype">Type</label>
+      <input type="text" class="form-control"  placeholder="Type" name="type">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress">CGPA</label>
-    <input type="text" class="form-control" id="text" placeholder="CGPA" name="cgpa">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Image</label>
-    <input type="file" class="form-control" placeholder="Image">
+    <label for="inputdescription">Description</label>
+    <input type="text" class="form-control"  placeholder="Description" name="description">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputCity">Course Code</label>
-      <input type="text" class="form-control" id="inputCity" name="coursecode">
+      <label for="inputdatestart">Date Start</label>
+      <input type="date" class="form-control"  name="datetstart">
     </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Faculty</label>
-      <input type="text" class="form-control" id="text" name="faculty">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Semester</label>
-      <input type="text" class="form-control" id="text" name="semester">
+    <div class="form-group col-md-6">
+      <label for="inputdateend">Date End</label>
+      <input type="date" class="form-control"  name="dateend">
     </div>
   </div>
       </div>
