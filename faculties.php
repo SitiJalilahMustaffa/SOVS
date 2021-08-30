@@ -155,46 +155,22 @@ if(!isset($_SESSION['admin_id'])){
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Insert students' data</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Insert Faculty</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
 
-      <form action="controller.php?mod=addStudent" method="post">
+      <form action="controller.php?mod=addFaculty" method="post">
       <div class="modal-body">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Name</label>
       <input type="text" class="form-control" id="text" placeholder="Name" name="name">
     </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Matric Number</label>
-      <input type="text" class="form-control" id="text" placeholder="Matric Number" name="matricnumber">
-    </div>
+    
   </div>
-  <div class="form-group">
-    <label for="inputAddress">CGPA</label>
-    <input type="text" class="form-control" id="text" placeholder="CGPA" name="cgpa">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Image</label>
-    <input type="file" class="form-control" placeholder="Image">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">Course Code</label>
-      <input type="text" class="form-control" id="inputCity" name="coursecode">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Faculty</label>
-      <input type="text" class="form-control" id="text" name="faculty">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Semester</label>
-      <input type="text" class="form-control" id="text" name="semester">
-    </div>
-  </div>
+  
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -207,16 +183,16 @@ if(!isset($_SESSION['admin_id'])){
 
             <?php include 'footer.php' ?>
 
-        </div>
+          </div>
         <!-- End of Content Wrapper -->
 
-    </div>
-    <!-- End of Page Wrapper -->
+        </div>
+     <!-- End of Page Wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
+     <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
-    </a>
+      </a>
 
     
 

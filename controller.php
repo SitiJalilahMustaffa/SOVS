@@ -20,6 +20,10 @@ class controller{
 						$this->addStudent($conn);
 						break;
 
+					case 'addFaculty':
+						$this->addFaculty($conn);
+						break;
+
 					//---------------- START BASIC PART ----------------
 						case 'login':
 						$this->login($conn);
@@ -63,6 +67,16 @@ class controller{
 
 		   $this->redirect('students.php', 'Succesfully Saved');
 	   }
+
+	   public function addFaculty($conn){
+		$name = $this->valdata($conn, $_POST['name']);
+
+		$sql = "INSERT INTO faculties (name) VALUES (?)";
+		$stmt = $conn->prepare($sql);
+		$rs = $stmt->execute([$name]);
+
+		$this->redirect('faculties.php', 'Succesfully Saved');
+	}
 
 		public function getOneData($conn, $query){
 			
