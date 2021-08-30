@@ -42,7 +42,7 @@ class controller{
 			$datestart = $this->valdata($conn, $_POST['datestart']);
 			$dateend = $this->valdata($conn, $_POST['dateend']);
  
-			$sql = "INSERT INTO students (name, type, description, datestart, dateend) VALUES (?, ?, ?, ?, ?)";
+			$sql = "INSERT INTO events (name, type, description, datestart, dateend) VALUES (?, ?, ?, ?, ?)";
 			$stmt = $conn->prepare($sql);
 			$rs = $stmt->execute([$name,$type,$description,$datestart,$dateend]);
  
