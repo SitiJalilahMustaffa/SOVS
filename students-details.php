@@ -9,9 +9,8 @@ if(!isset($_SESSION['admin_id'])){
 $controller = new controller();
 $conn = $controller->open();
 
-$students = $controller->getListData($conn, "SELECT * FROM students")
-;
-
+$id = $controller->valdata($conn, $_GET['id']);
+$student = $controller->getOneData($conn, "SELECT * FROM students WHERE id = ". $id);
 
 ?>
 
@@ -71,76 +70,12 @@ $students = $controller->getListData($conn, "SELECT * FROM students")
                             <h6 class="m-0 font-weight-bold text-primary">Students Data Table</h6>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Matric Number</th>
-                                            <th>Course Code</th>
-                                            <th>Faculty</th>
-                                            <th>Semester</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                        <th>Name</th>
-                                            <th>Matric Number</th>
-                                            <th>Course Code</th>
-                                            <th>Faculty</th>
-                                            <th>Semester</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-
-                                    <?php
-                                    if($students !=null) {
-                                        foreach($students as $student){?>
-                                        <tr>
-                                            <td><?= $student['name'] ?></td>
-                                            <td><?= $student['unique_id'] ?></td>
-                                            <td><?= $student['course'] ?></td>
-                                            <td><?= $student['faculty_id'] ?></td>
-                                            <td><?= $student['semester'] ?></td>
-                                            <td>
-                                            <a href="students-details.php?id=<?= $student['id'] ?>" onclick="return confirm('Sure ?')" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
-                                            <a href="controller.php?mod=deleteStudent&id=<?= $student['id'] ?>" onclick="return confirm('Sure ?')" class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i></a> 
-                                            <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
-                                        </td>
-                                        </tr>
-                                       <?php } } ?>
-                                        
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /.container-fluid -->
-
-            </div>
-            <!-- End of Main Content -->
-
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Insert students' data</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-      <form action="controller.php?mod=addStudent" method="post">
+                             <form action="controller.php?mod=updateStudent" method="post">
       <div class="modal-body">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Name</label>
-      <input type="text" class="form-control" id="text" placeholder="Name" name="name">
+      <input type="text" class="form-control" id="text" placeholder="Name" name="name" value="<?=$student['name']?>">
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Matric Number</label>
@@ -171,14 +106,21 @@ $students = $controller->getListData($conn, "SELECT * FROM students")
   </div>
       </div>
       <div class="modal-footer">
+          <input type="hidden" name="id" value="<?= $id ?>">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary">Save</button>
       </div>
       </form>
-    </div>
-  </div>
-</div>
+                        </div>
+                    </div>
 
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+        
            <?php include 'footer.php' ?>
 
         </div>

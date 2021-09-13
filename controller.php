@@ -12,6 +12,14 @@ class controller{
 
 				switch ($action) {
 
+					case 'updateStudent':
+						$this->updateStudent($conn);
+						break;
+
+					case 'deleteStudent':
+						$this->deleteStudent($conn);
+						break;
+
 					case 'addElection':
 						$this->addElection($conn);
 						break;
@@ -37,6 +45,34 @@ class controller{
 					
 				}
 			}
+		}
+
+		public function updateStudent($conn){
+			$name = $this->valdata($conn, $_POST['name']);
+			$matricnumber = $this->valdata($conn, $_POST['matricnumber']);
+			$cgpa = $this->valdata($conn, $_POST['cgpa']);
+			$coursecode = $this->valdata($conn, $_POST['coursecode']);
+			$faculty = $this->valdata($conn, $_POST['faculty']);
+			$semester = $this->valdata($conn, $_POST['semester']);
+ 
+			$id = $this->valdata($conn, $_POST['id']);
+
+			$sql = "UPDATE students SET name = ?, unique_id = ?, faculty_id = ?, course = ?, semester = ?, cgpa = ? WHERE id = ?";
+			$stmt = $conn->prepare($sql);
+			$rs = $stmt->execute([$name,$matricnumber,$faculty,$coursecode,$semester,$cgpa,$id]);
+ 
+			$this->redirect('students.php', 'Succesfully Saved');
+		}
+
+        public function deleteStudent($conn){
+			$id = $this->valdata($conn, $_GET['id']);
+
+			$sql = "DELETE FROM students WHERE id = ?";
+			$stmt = $conn->prepare($sql);
+			$stmt ->execute([$id]);
+
+			$this->redirect('students.php', 'Succesfully delete');
+
 		}
 
 		public function addElection($conn){

@@ -59,58 +59,41 @@ if(!isset($_SESSION['admin_id'])){
                         <button type="button" class="btn btn-outline-primary" data-toggle="modal"
                             data-target="#exampleModal">Add Election</button>
                     </div>
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Students Data Table</h6>
+ 
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    test
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Election Name</th>
-                                            <th>Type of Election</th>
-                                            <th>Faculty</th>
-                                            <th>End Date</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Election Name</th>
-                                            <th>Type of Election</th>
-                                            <th>Faculty</th>
-                                            <th>End Date</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>PMPP</td>
-                                            <td>General</td>
-                                            <td>All</td>
-                                            <td>12/8/2021</td>
-                                            <td>
-                                                <button class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
-                                                <button class="btn btn-info btn-sm"><i
-                                                        class="fas fa-trash-alt"></i></button>
-                                                <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>PMPP</td>
-                                            <td>Faculty</td>
-                                            <td>FSTM</td>
-                                            <td>12/8/2021</td>
-                                            <td>
-                                                <button class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
-                                                <button class="btn btn-info btn-sm"><i
-                                                        class="fas fa-trash-alt"></i></button>
-                                                <a href="elections-details.php"  class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
-                                            </td>
-                                    </tbody>
-                                </table>
+ 
+                        <div class="col-md-7">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            test
+                                        </div>
+                                    </div>
+                                </div>
+ 
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            test
+                                        </div>
+                                    </div>
+                                </div>
+ 
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            test
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
