@@ -62,7 +62,7 @@ $student = $controller->getOneData($conn, "SELECT * FROM students WHERE id = ". 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-2 text-gray-800">STUDENTS DATA</h1>
-                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Add Student</button>
+                  
                     </div>
                    <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -84,7 +84,7 @@ $student = $controller->getOneData($conn, "SELECT * FROM students WHERE id = ". 
   </div>
   <div class="form-group">
     <label for="inputAddress">CGPA</label>
-    <input type="text" class="form-control" id="text" placeholder="CGPA" name="cgpa">
+    <input type="text" class="form-control" id="text" placeholder="CGPA" name="cgpa" value="<?=$student['cgpa']?>">
   </div>
   <div class="form-group">
     <label for="inputAddress2">Image</label>
@@ -93,15 +93,15 @@ $student = $controller->getOneData($conn, "SELECT * FROM students WHERE id = ". 
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputCity">Course Code</label>
-      <input type="text" class="form-control" id="inputCity" name="coursecode">
+      <input type="text" class="form-control" id="text" name="coursecode" >
     </div>
     <div class="form-group col-md-2">
       <label for="inputZip">Faculty</label>
-      <input type="text" class="form-control" id="text" name="faculty">
+      <input type="text" class="form-control" id="text" name="faculty" >
     </div>
     <div class="form-group col-md-2">
       <label for="inputZip">Semester</label>
-      <input type="text" class="form-control" id="text" name="semester">
+      <input type="text" class="form-control" id="text" name="semester" >
     </div>
   </div>
       </div>

@@ -6,6 +6,13 @@ if(!isset($_SESSION['admin_id'])){
    echo"<script>window.location = 'login.php'</script>";
 }
 
+$controller = new controller();
+$conn = $controller->open();
+
+$candidates = $controller->getListData($conn, "SELECT * FROM candidates")
+;
+
+
 ?>
 
 <!DOCTYPE html>
@@ -81,26 +88,18 @@ if(!isset($_SESSION['admin_id'])){
                                         </tr>
                                     </tfoot>
                                     <tbody>
+                                    <?php
+                                    if($candidates !=null) {
+                                        foreach($candidates as $candidate){?>
                                         <tr>
-                                            <td>Alisya Adnan</td>
-                                            <td>19BT02026</td>
+                                            <td><?= $candidate['name'] ?></td>
+                                            <td><?= $candidate['unique_id'] ?></td>
                                             <td>
-                                            <button class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
-                                            <button class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i></button> 
-                                            <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button> 
-                                          </td>
-                                            
-                    
+                                            <a href="controller.php?mod=deleteCandidate&id=<?= $student['id'] ?>" onclick="return confirm('Sure ?')" class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i></a> 
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
+                                            </td>
                                         </tr>
-                                        <tr>
-                                            <td>Iman Daniel</td>
-                                            <td>195074</td>
-                                            <td>
-                                            <button class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
-                                            <button class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i></button> 
-                                            <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button> 
-                                        </tr>
-                                      
+                                       <?php } } ?>
                                        
                                     </tbody>
                                 </table>
@@ -124,7 +123,7 @@ if(!isset($_SESSION['admin_id'])){
         </button>
       </div>
 
-      <form action="controller.php?mod=addStudent" method="post">
+      <form action="controller.php?mod=addCandidate" method="post">
       <div class="modal-body">
   <div class="form-row">
     <div class="form-group col-md-6">

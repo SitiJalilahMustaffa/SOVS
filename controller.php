@@ -12,16 +12,32 @@ class controller{
 
 				switch ($action) {
 
+					case 'deleteCandidate':
+						$this->deleteCandidate($conn);
+						break;
+					
+					case 'addCandidate':
+						$this->addCandidate($conn);
+						break;
+					
+					case 'addElection':
+						$this->addElection($conn);
+						break;
+					
+					case 'updateElection':
+						$this->updateElection($conn);
+						break;
+
+					case 'deleteElection':
+						$this->deleteElection($conn);
+						break;
+
 					case 'updateStudent':
 						$this->updateStudent($conn);
 						break;
 
 					case 'deleteStudent':
 						$this->deleteStudent($conn);
-						break;
-
-					case 'addElection':
-						$this->addElection($conn);
 						break;
 					
 					case 'addStudent':
@@ -30,6 +46,10 @@ class controller{
 
 					case 'addFaculty':
 						$this->addFaculty($conn);
+						break;
+
+					case 'deleteFaculty':
+						$this->deleteFaculty($conn);
 						break;
 
 					//---------------- START BASIC PART ----------------
@@ -46,6 +66,53 @@ class controller{
 				}
 			}
 		}
+
+		public function deleteCandidate($conn){
+			$id = $this->valdata($conn, $_GET['id']);
+
+			$sql = "DELETE FROM candidates WHERE id = ?";
+			$stmt = $conn->prepare($sql);
+			$stmt ->execute([$id]);
+
+			$this->redirect('candidates.php', 'Succesfully delete');
+
+		}
+
+		public function addCandidate($conn){
+			
+			$this->redirect('candidates.php', 'Succesfully Saved');
+		}
+
+		public function addElection($conn){
+			$name = $this->valdata($conn, $_POST['name']);
+			$type = $this->valdata($conn, $_POST['type']);
+			$description = $this->valdata($conn, $_POST['description']);
+			$datestart = $this->valdata($conn, $_POST['datestart']);
+			$dateend = $this->valdata($conn, $_POST['dateend']);
+ 
+			$sql = "INSERT INTO elections (name, type, description, datestart, dateend) VALUES (?, ?, ?, ?, ?)";
+			$stmt = $conn->prepare($sql);
+			$rs = $stmt->execute([$name,$type,$description,$datestart,$dateend]);
+ 
+			$this->redirect('elections.php', 'Succesfully Saved');
+		}
+
+		public function updateElection($conn){
+			$name = $this->valdata($conn, $_POST['name']);
+			$type = $this->valdata($conn, $_POST['type']);
+			$description = $this->valdata($conn, $_POST['description']);
+			$datestart = $this->valdata($conn, $_POST['datestart']);
+			$dateend = $this->valdata($conn, $_POST['dateend']);
+
+			$id = $this->valdata($conn, $_POST['id']);
+ 
+			$sql = "UPDATE elections SET name = ?, type = ?, description = ?, datestart = ?, dateend = ? WHERE id = ?";
+			$stmt = $conn->prepare($sql);
+			$rs = $stmt->execute([$name,$type,$description,$datestart,$dateend,$id]);
+ 
+			$this->redirect('elections.php', 'Succesfully Saved');
+		}
+
 
 		public function updateStudent($conn){
 			$name = $this->valdata($conn, $_POST['name']);
@@ -64,6 +131,17 @@ class controller{
 			$this->redirect('students.php', 'Succesfully Saved');
 		}
 
+		public function deleteElection($conn){
+			$id = $this->valdata($conn, $_GET['id']);
+
+			$sql = "DELETE FROM elections WHERE id = ?";
+			$stmt = $conn->prepare($sql);
+			$stmt ->execute([$id]);
+
+			$this->redirect('elections.php', 'Succesfully delete');
+
+		}
+
         public function deleteStudent($conn){
 			$id = $this->valdata($conn, $_GET['id']);
 
@@ -73,20 +151,6 @@ class controller{
 
 			$this->redirect('students.php', 'Succesfully delete');
 
-		}
-
-		public function addElection($conn){
-			$name = $this->valdata($conn, $_POST['name']);
-			$type = $this->valdata($conn, $_POST['type']);
-			$description = $this->valdata($conn, $_POST['description']);
-			$datestart = $this->valdata($conn, $_POST['datestart']);
-			$dateend = $this->valdata($conn, $_POST['dateend']);
- 
-			$sql = "INSERT INTO events (name, type, description, datestart, dateend) VALUES (?, ?, ?, ?, ?)";
-			$stmt = $conn->prepare($sql);
-			$rs = $stmt->execute([$name,$type,$description,$datestart,$dateend]);
- 
-			$this->redirect('elections.php', 'Succesfully Saved');
 		}
 
        public function addStudent($conn){
@@ -112,6 +176,17 @@ class controller{
 		$rs = $stmt->execute([$name]);
 
 		$this->redirect('faculties.php', 'Succesfully Saved');
+	}
+
+	public function deleteFaculty($conn){
+		$id = $this->valdata($conn, $_GET['id']);
+
+		$sql = "DELETE FROM faculties WHERE id = ?";
+		$stmt = $conn->prepare($sql);
+		$stmt ->execute([$id]);
+
+		$this->redirect('faculties.php', 'Succesfully delete');
+
 	}
 
 		public function getOneData($conn, $query){

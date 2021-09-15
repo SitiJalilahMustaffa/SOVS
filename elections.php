@@ -6,6 +6,13 @@ if(!isset($_SESSION['admin_id'])){
    echo"<script>window.location = 'login.php'</script>";
 }
  
+$controller = new controller();
+$conn = $controller->open();
+
+$elections = $controller->getListData($conn, "SELECT * FROM elections")
+;
+
+
 ?>
  
 <!DOCTYPE html>
@@ -86,29 +93,22 @@ if(!isset($_SESSION['admin_id'])){
                                         </tr>
                                     </tfoot>
                                     <tbody>
+                                    <?php
+                                    if($elections !=null) {
+                                        foreach($elections as $election){?>
                                         <tr>
-                                            <td>PMPP</td>
-                                            <td>General</td>
-                                            <td>All</td>
-                                            <td>12/8/2021</td>
+                                            <td><?= $election['name'] ?></td>
+                                            <td><?= $election['type'] ?></td>
+                                            <td><?= $election['description'] ?></td>
+                                            <td><?= $election['dateend'] ?></td>
+                                          
                                             <td>
-                                                <button class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
-                                                <button class="btn btn-info btn-sm"><i
-                                                        class="fas fa-trash-alt"></i></button>
-                                                <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
-                                            </td>
+                                            <a href="elections-details.php?id=<?= $election['id'] ?>" onclick="return confirm('Sure ?')" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
+                                            <a href="controller.php?mod=deleteElection&id=<?= $election['id'] ?>" onclick="return confirm('Sure ?')" class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i></a> 
+                                            <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
+                                        </td>
                                         </tr>
-                                        <tr>
-                                            <td>PMPP</td>
-                                            <td>Faculty</td>
-                                            <td>FSTM</td>
-                                            <td>12/8/2021</td>
-                                            <td>
-                                                <button class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
-                                                <button class="btn btn-info btn-sm"><i
-                                                        class="fas fa-trash-alt"></i></button>
-                                                <a href="elections-details.php"  class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
-                                            </td>
+                                       <?php } } ?>
                                     </tbody>
                                 </table>
                             </div>
