@@ -13,8 +13,7 @@
 		<form action="controller.php?mod=login" method="post">
 			<p>Email</p><input placeholder="Enter Email" type="email" name="email">
 			<p>Passwrod</p><input placeholder="Enter Password" type="password" name="password"> <input type="submit" value="Sign in">
-			<p><input type="checkbox">Remember Me</p>
-			<p><a class="small" href="forgot-password.php">Forgot Password?</a></p>
+			<p><a class="small" href="forgotpassword.php">Forgot Password?</a></p>
 			
 		</form>
 	</div>

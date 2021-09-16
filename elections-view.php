@@ -63,10 +63,10 @@ $elections = $controller->getListData($conn, "SELECT * FROM elections")
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800">ELECTIONS DATA</h1>
-                        <button type="button" class="btn btn-outline-primary" data-toggle="modal"
-                            data-target="#exampleModal">Add Election</button>
                     </div>
                     <!-- DataTales Example -->
+                    <div class="row">
+                        <div class="col-md-7">
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Students Data Table</h6>
@@ -114,6 +114,38 @@ $elections = $controller->getListData($conn, "SELECT * FROM elections")
                             </div>
                         </div>
                     </div>
+                        </div>
+
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        test
+                                    </div>
+                                    
+                        </div>
+                        </div>
+                        <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        test
+                                    </div>
+                                    
+                        </div>
+                        </div>
+
+                        <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        test
+                                    </div>
+                                    
+                        </div>
+                        </div>
+                        
+
+                        
  
                 </div>
                 <!-- /.container-fluid -->

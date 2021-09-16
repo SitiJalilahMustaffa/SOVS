@@ -124,7 +124,7 @@ $faculties = $controller->getListData($conn, "SELECT * FROM faculties")
         </button>
       </div>
 
-      <form action="controller.php?mod=addStudent" method="post">
+      <form action="controller.php?mod=addFaculty" method="post">
       <div class="modal-body">
   <div class="form-row">
     <div class="form-group col-md-6">

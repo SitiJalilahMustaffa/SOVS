@@ -105,7 +105,7 @@ $students = $controller->getListData($conn, "SELECT * FROM students")
                                             <td><?= $student['faculty_id'] ?></td>
                                             <td><?= $student['semester'] ?></td>
                                             <td>
-                                            <a href="students-details.php?id=<?= $student['id'] ?>" onclick="return confirm('Sure ?')" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
+                                            <a href="students-details.php?id=<?= $student['id'] ?>" onclick="return confirm('Sure ?')" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a>
                                             <a href="controller.php?mod=deleteStudent&id=<?= $student['id'] ?>" onclick="return confirm('Sure ?')" class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i></a> 
                                             <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
                                         </td>

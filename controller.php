@@ -5,6 +5,8 @@ session_start();
 $config = new controller();
 class controller{
 
+	
+
 		function __construct(){
 			if (isset($_GET['mod'])) {
 				$conn = $this->open();
@@ -178,7 +180,7 @@ class controller{
 		$this->redirect('faculties.php', 'Succesfully Saved');
 	}
 
-	public function deleteFaculty($conn){
+	   public function deleteFaculty($conn){
 		$id = $this->valdata($conn, $_GET['id']);
 
 		$sql = "DELETE FROM faculties WHERE id = ?";

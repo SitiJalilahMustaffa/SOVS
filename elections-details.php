@@ -62,7 +62,6 @@ $election = $controller->getOneData($conn, "SELECT * FROM elections WHERE id = "
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-2 text-gray-800">ELECTIONS DATA</h1>
-                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Add Election</button>
                     </div>
                    <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -100,7 +99,7 @@ $election = $controller->getOneData($conn, "SELECT * FROM elections WHERE id = "
                             </div>
                             <div class="modal-footer">
                                 <input type="hidden" name="id" value="<?= $id ?>">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <a href="elections.php"  type="button" class="btn btn-secondary" >Close</a>
                                 <button type="submit" class="btn btn-primary">Save</button>
                             </div>
                         </form>

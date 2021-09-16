@@ -107,7 +107,7 @@ $student = $controller->getOneData($conn, "SELECT * FROM students WHERE id = ". 
       </div>
       <div class="modal-footer">
           <input type="hidden" name="id" value="<?= $id ?>">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="students.php"  type="button" class="btn btn-secondary" >Close</a>
         <button type="submit" class="btn btn-primary">Save</button>
       </div>
       </form>
