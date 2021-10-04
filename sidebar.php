@@ -12,19 +12,7 @@
 <!-- Divider -->
 <hr class="sidebar-divider my-0">
 
-<!-- Nav Item - Dashboard -->
-<li class="nav-item active">
-    <a class="nav-link" href="index.php">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
-</li>
 
- <!-- Nav Item - Report -->
-<li class="nav-item">
-<a class="nav-link" href="reports.php">
-    <i class="fas fa-fw fa-chart-area"></i>
-    <span>Report</span></a>
-</li>
 
 <!-- Divider -->
 <hr class="sidebar-divider">
@@ -36,17 +24,11 @@
 
 <!-- Nav Item - Student -->
 <li class="nav-item">
-<a class="nav-link" href="students.php">
+<a class="nav-link" href="index.php">
 <i class="fas fa-user-graduate"></i>
     <span>Student</span></a>
 </li>
 
-<!-- Nav Item - Candidate -->
-<li class="nav-item">
-<a class="nav-link" href="candidates.php">
-<i class="far fa-address-card"></i>
-    <span>Candidate</span></a>
-</li>
 
 
 
