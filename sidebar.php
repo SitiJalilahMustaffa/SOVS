@@ -26,7 +26,7 @@
 <li class="nav-item">
 <a class="nav-link" href="index.php">
 <i class="fas fa-user-graduate"></i>
-    <span>Student</span></a>
+    <span>Election</span></a>
 </li>
 
 
@@ -45,9 +45,9 @@
 
 <!-- Nav Item - Election -->
 <li class="nav-item">
-    <a class="nav-link" href="elections.php">
+    <a class="nav-link" href="students.php">
     <i class="fas fa-cogs"></i>
-        <span>Election</span></a>
+        <span>Student</span></a>
 </li>
 
 <li class="nav-item">
